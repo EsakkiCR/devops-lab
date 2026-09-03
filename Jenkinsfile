@@ -2,13 +2,6 @@ pipeline {
 	agent any
 	
 	stages {
-
-		stage('Checkout Git'){
-			steps{
-				git branch: 'master', url: '/opt/devops-project'
-			}
-		}
-
 		stage ('Docker Build'){
 			steps{
 				echo "Building Docker Image"
