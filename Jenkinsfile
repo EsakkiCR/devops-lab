@@ -5,14 +5,7 @@ pipeline {
 
 		stage('Checkout Git'){
 			steps{
-				echo "Chekingout Git Repository"
 				git branch: 'master', url: '/opt/devops-project'
-			}
-		}
-
-		stage ('Verify Checkout'){
-			steps{
-				sh 'git status'
 			}
 		}
 
